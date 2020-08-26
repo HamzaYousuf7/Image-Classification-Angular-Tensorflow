@@ -20,7 +20,7 @@
 
   <!-- STAGE 2 pick an image-->
   <div class="row" *ngIf="model">
-    <div class="col-xs-4 input-group" style="margin-left: 15px">
+    <div class="col-xs-4 input-group" style="margin: 15px">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-upload"></i>
       </span>
@@ -52,13 +52,14 @@
   </div>
 
   <!-- STAGE 3 show result-->
-</div>
-
-<div class="row" style="margin: 15px" *ngIf="classifiedResultS">
-  <div class="panel panel-info"  style="margin-bottom: 15px" *ngFor="let result of classifiedResultS">
-    <div class="panel-heading">Classified as {{result.class}}</div>
-    <div class="panel-body">
-      Percentage:% {{(result.probability * 100).toFixed(2)}}
+  <div class="row" style="margin: 15px" *ngIf="classifiedResultS">
+    <div class="panel panel-info"  style="margin-bottom: 15px" *ngFor="let result of classifiedResultS">
+      <div class="panel-heading">Classified as {{result.className}}</div>
+      <div class="panel-body">
+        Percentage:% {{(result.probability * 100).toFixed(2)}}
+      </div>
     </div>
   </div>
 </div>
+
+
